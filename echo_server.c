@@ -1,7 +1,6 @@
 /* A simple echo server using TCP */
 #include <stdio.h>
 #include <sys/types.h>
-#include <sys/unistd.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <sys/signal.h>
@@ -29,7 +28,7 @@ int main(int argc, char **argv)
 		port = atoi(argv[1]);
 		break;
 	default:
-		fprintf(stderr, "Usage: %s [port]\n", argv[0]);
+		fprintf(stderr, "Usage: %d [port]\n", argv[0]);
 		exit(1);
 	}
 
